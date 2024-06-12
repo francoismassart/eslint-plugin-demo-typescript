@@ -11,7 +11,7 @@
   "homepage": "https://www.npmjs.com/package/eslint-plugin-demo-typescript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/francoismassart/eslint-plugin-demo-typescript",
+    "url": "https://github.com/francoismassart/eslint-plugin-demo-typescript"
   },
   "bugs": "https://github.com/francoismassart/eslint-plugin-demo-typescript/issues",
   "main": "./dist/index.js",
