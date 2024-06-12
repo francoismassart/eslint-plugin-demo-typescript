@@ -16,7 +16,7 @@ It will be a quick way to browse the full code on its own and possibly to enhanc
 In this repo's folder:
 `pnpm i`
 
-#### Build (Not working yet)
+#### Build
 
 `pnpm build`
 

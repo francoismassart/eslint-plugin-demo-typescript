@@ -1,9 +1,9 @@
-import { TSESTree } from '@typescript-eslint/types';
+import { RuleCreator } from '@typescript-eslint/utils/eslint-utils';
 export { ESLintUtils } from '@typescript-eslint/utils';
 
 // The Rule creator returns a function that is used to create a well-typed ESLint rule
 // The parameter passed into RuleCreator is a URL generator function.
-export const createRule = ESLintUtils.RuleCreator(name => `https://my-website.io/eslint/${name}`);
+export const createRule = RuleCreator(name => `https://my-website.io/eslint/${name}`);
 
 export const myRule= createRule({
   name: 'my-rule',
@@ -31,11 +31,11 @@ export const myRule= createRule({
               suggest: [
                 {
                   messageId: 'fix:let',
-                  fix: fix: fixer => fixer.replaceText(node, 'let'),
+                  fix: fixer => fixer.replaceText(node, 'let'),
                 },
                 {
                   messageId: 'fix:const',
-                  fix: fix: fixer => fixer.replaceText(node, 'const'),
+                  fix: fixer => fixer.replaceText(node, 'const'),
                 },
               ],
             })
