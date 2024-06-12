@@ -18,7 +18,7 @@
   "exports": "./dist/index.js",
   "scripts": {
     "build": "tsup ./lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "license": "ISC",
   "dependencies": {
@@ -28,8 +28,11 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.56.10",
+    "@types/jest": "^26.0.22",
     "@typescript-eslint/rule-tester": "^7.13.0",
     "eslint-doc-generator": "^1.7.1",
-    "tsup": "^8.1.0"
+    "jest": "^26.6.3",
+    "tsup": "^8.1.0",
+    "ts-jest": "^26.5.4"
   }
 }
