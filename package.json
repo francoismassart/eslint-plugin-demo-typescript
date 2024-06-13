@@ -16,6 +16,7 @@
   "bugs": "https://github.com/francoismassart/eslint-plugin-demo-typescript/issues",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
+  "files": ["dist"],
   "scripts": {
     "build": "tsup ./lib/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
