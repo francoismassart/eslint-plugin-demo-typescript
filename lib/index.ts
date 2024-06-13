@@ -10,7 +10,7 @@ interface Plugin extends Omit<ESLint.Plugin, 'rules'> {
 
 const plugin: Plugin = {
   meta: {
-    name: 'eslint-plugin-<my-plugin>', // or `@my-scope/eslint-plugin`
+    name: 'eslint-plugin-demo-typescript', // or `@my-scope/eslint-plugin`
     version: '0.0.1',
   },
   rules

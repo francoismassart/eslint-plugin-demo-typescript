@@ -22,17 +22,6 @@ ruleTester.run('eslint-plugin/my-rule', myRule, {
     },
   ],
   invalid: [
-    // If our rule is fixable:
-    {
-      code: `var z = 'foo'`,
-      output: `let z = foo`,
-      errors: [
-        {
-          messageId: 'issue:var',
-        },
-      ],
-    },
-    // or, if we only have suggestions:
     {
       code: `var z = 'foo'`,
       errors: [
@@ -41,11 +30,11 @@ ruleTester.run('eslint-plugin/my-rule', myRule, {
           suggestions: [
             {
               messageId: 'fix:let',
-              output: `let z = foo`,
+              output: `let z = 'foo'`,
             },
             {
               messageId: 'fix:const',
-              output: `const z = foo`,
+              output: `const z = 'foo'`,
             }
           ]
         },

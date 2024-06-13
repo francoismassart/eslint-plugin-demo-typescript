@@ -13,18 +13,33 @@ It will be a quick way to browse the full code on its own and possibly to enhanc
 
 ### Install
 
-In this repo's folder:
 `pnpm i`
 
-#### Build
+### Build
 
 `pnpm build`
 
-#### Test (Not working yet)
+### Test
 
 `pnpm test`
 
-## Docs (Not working yet)
+
+NB: In order to use, the [`RuleTester`](https://typescript-eslint.io/packages/rule-tester) from `@typescript-eslint/rule-tester`, we must:
+
+- Have a `tsconfig.json` with:
+  ```
+  {
+    "compilerOptions": {
+      "module": "nodenext",
+      "moduleResolution": "nodenext"
+    }
+  }
+  ```
+  More info can be found on [`v6`: Cannot find module `@typescript-eslint/*` or its corresponding type declarations](https://github.com/typescript-eslint/typescript-eslint/issues/7284).
+  > You can use `bundler`, `node16`, or `nodenext` for `moduleResolution`.
+- Use `eslint` with `v8`, [`typescript-eslint` does not support `v9` yet](https://github.com/typescript-eslint/typescript-eslint/issues/8211)
+
+### Docs (Not working yet)
 
 `npx eslint-doc-generator --init-rule-docs`
 

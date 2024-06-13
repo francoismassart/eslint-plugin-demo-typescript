@@ -11,7 +11,7 @@ export const myRule= createRule({
     docs: {
       description: 'An example ESLint rule',
     },
-    type: 'suggestion',
+    hasSuggestions: true,
     messages: {
       // Message IDs don't need to be prefixed, I just find it easier to keep track of them this way
       'issue:var': 'Prefer using `let` or `const`',
@@ -19,23 +19,25 @@ export const myRule= createRule({
       'fix:const': 'Replace this `var` declaration with `const`',
     },
     schema: [],
+    type: 'suggestion',
   },
   defaultOptions: [],
   create: context => {
     return {
       VariableDeclaration: node => {
         if (node.kind === 'var') {
+          const range: readonly [number, number] = [0, 3 /* 'var'.length */]
           context.report({
             node,
               messageId: 'issue:var', // Prints the message with this ID when a problem is found
               suggest: [
                 {
                   messageId: 'fix:let',
-                  fix: fixer => fixer.replaceText(node, 'let'),
+                  fix: fixer => fixer.replaceTextRange(range, 'let'),
                 },
                 {
                   messageId: 'fix:const',
-                  fix: fixer => fixer.replaceText(node, 'const'),
+                  fix: fixer => fixer.replaceTextRange(range, 'const'),
                 },
               ],
             })
