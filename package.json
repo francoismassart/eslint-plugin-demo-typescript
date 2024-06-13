@@ -20,7 +20,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup ./lib/index.ts",
+    "build": "tsc",
+    "tsup": "tsup ./lib/index.ts",
+    "docs": "eslint-doc-generator",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC",
@@ -34,6 +36,7 @@
     "@typescript-eslint/parser": "^7.13.0",
     "@typescript-eslint/rule-tester": "^7.13.0",
     "eslint-doc-generator": "^1.7.1",
-    "tsup": "^8.1.0"
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
   }
 }
