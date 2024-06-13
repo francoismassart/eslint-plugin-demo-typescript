@@ -22,6 +22,9 @@ devDependencies:
   '@types/jest':
     specifier: ^29.5.12
     version: 29.5.12
+  '@typescript-eslint/parser':
+    specifier: ^7.13.0
+    version: 7.13.0(eslint@9.4.0)(typescript@5.4.5)
   '@typescript-eslint/rule-tester':
     specifier: ^7.13.0
     version: 7.13.0(@eslint/eslintrc@3.1.0)(eslint@9.4.0)(typescript@5.4.5)
@@ -1186,6 +1189,27 @@ packages:
     resolution: {integrity: sha512-xQ67Yc/laOG5uMfX/093MRlGGCIBzZMarVa+gfNKJxWAIgykYpVGkBdbqEzGDDfCrVUj6Hiff4mTZ5BA6TmAog==}
     dependencies:
       '@types/yargs-parser': 21.0.3
+    dev: true
+
+  /@typescript-eslint/parser@7.13.0(eslint@9.4.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-EjMfl69KOS9awXXe83iRN7oIEXy9yYdqWfqdrFAYAAr6syP8eLEFI7ZE4939antx2mNgPRW/o1ybm2SFYkbTVA==}
+    engines: {node: ^18.18.0 || >=20.0.0}
+    peerDependencies:
+      eslint: ^8.56.0
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@typescript-eslint/scope-manager': 7.13.0
+      '@typescript-eslint/types': 7.13.0
+      '@typescript-eslint/typescript-estree': 7.13.0(typescript@5.4.5)
+      '@typescript-eslint/visitor-keys': 7.13.0
+      debug: 4.3.5
+      eslint: 9.4.0
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@typescript-eslint/rule-tester@7.13.0(@eslint/eslintrc@3.1.0)(eslint@9.4.0)(typescript@5.4.5):
