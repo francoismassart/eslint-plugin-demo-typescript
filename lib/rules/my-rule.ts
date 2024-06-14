@@ -26,7 +26,8 @@ export const myRule= createRule({
     return {
       VariableDeclaration: node => {
         if (node.kind === 'var') {
-          const range: readonly [number, number] = [0, 3 /* 'var'.length */]
+
+          const range: readonly [number, number] = [node.range[0], node.range[0] + 3 /* 'var'.length */]
           context.report({
             node,
               messageId: 'issue:var', // Prints the message with this ID when a problem is found
