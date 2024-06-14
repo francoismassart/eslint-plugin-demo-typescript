@@ -8,12 +8,17 @@ interface Plugin extends Omit<ESLint.Plugin, 'rules'> {
   rules: Record<RuleKey, RuleModule<any, any, any>>;
 }
 
+const { name, version } = require('../../package.json') as {
+  name: string;
+  version: string;
+};
+
 const plugin: Plugin = {
   meta: {
-    name: 'eslint-plugin-demo-typescript', // or `@my-scope/eslint-plugin`
-    version: '0.0.1',
+    name,
+    version
   },
   rules
 };
 
-export default plugin;
+export = plugin;
