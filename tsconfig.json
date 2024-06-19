@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "declaration": false,
+    "declarationMap": false,
     "esModuleInterop": true,
     "module": "nodenext",
     "moduleResolution": "nodenext",
@@ -13,8 +14,8 @@
     "strict": true,
     "sourceMap": false,
     "target": "es2015",
-    "rootDir": "lib",
-    "outDir": "dist"
+    "rootDir": "src/",
+    "outDir": "lib/"
   },
-  "include": ["lib"]
+  "include": ["src/**/*.ts"]
 }

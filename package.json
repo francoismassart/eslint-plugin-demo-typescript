@@ -27,7 +27,7 @@
   },
   "bugs": "https://github.com/francoismassart/eslint-plugin-demo-typescript/issues",
   "scripts": {
-    "build": "tsc -b tsconfig.build.json",
+    "build": "tsc -b tsconfig.json",
     "tsup": "tsup ./lib/index.ts",
     "docs": "eslint-doc-generator",
     "test": "echo \"Error: no test specified\" && exit 1"
