@@ -3,14 +3,14 @@
   "version": "0.0.1-alpha.5",
   "description": "Demonstrating an eslint plugin written in TypeScript",
   "files": [
-    "dist",
+    "lib",
     "package.json",
     "README.md"
   ],
   "type": "commonjs",
   "exports": {
     ".": {
-      "default": "./dist/lib/index.js"
+      "default": "./lib/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -27,7 +27,7 @@
   },
   "bugs": "https://github.com/francoismassart/eslint-plugin-demo-typescript/issues",
   "scripts": {
-    "build": "tsc -b tsconfig.build.json",
+    "build": "tsc -b tsconfig.json",
     "tsup": "tsup ./lib/index.ts",
     "docs": "eslint-doc-generator",
     "test": "vitest"
