@@ -3,14 +3,14 @@
   "version": "0.0.1-alpha.5",
   "description": "Demonstrating an eslint plugin written in TypeScript",
   "files": [
-    "dist",
+    "lib",
     "package.json",
     "README.md"
   ],
   "type": "commonjs",
   "exports": {
     ".": {
-      "default": "./dist/lib/index.js"
+      "default": "./lib/index.js"
     },
     "./package.json": "./package.json"
   },
