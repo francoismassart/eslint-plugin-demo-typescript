@@ -11,6 +11,8 @@ It will be a quick way to browse the full code on its own and possibly to enhanc
 
 ## Getting started
 
+I worked on this repo using `pnpm` but I should work with other package manager.
+
 ### Install
 
 `pnpm i`
@@ -21,7 +23,19 @@ It will be a quick way to browse the full code on its own and possibly to enhanc
 
 ### Test
 
-`pnpm test`
+Tests were setup to work with `jest` and `vitest` both comes with pros and cons...
+
+I would recommend Vitest but I also added Jest in case you want it.
+
+| Jest                     | Vitest                                         |
+| :----------------------- | :--------------------------------------------- |
+| Based on `commonjs`      | Based on `ESM`                                 |
+| ✅ Mocking               | ✅ Mocking                                     |
+| ✅ Snapshots             | ✅ Snapshots                                   |
+| ✅ Parallel testing      | ✅ Parallel testing                            |
+| ✅ Fast                  | ✅ Often faster                                |
+| -                        | ✅ Support benches                             |
+| ❌ Require `ts-jest` lib | ❌ Requires `setupFile` and `vitest.config.ts` |
 
 
 NB: In order to use, the [`RuleTester`](https://typescript-eslint.io/packages/rule-tester) from `@typescript-eslint/rule-tester`, we must:
@@ -39,11 +53,22 @@ NB: In order to use, the [`RuleTester`](https://typescript-eslint.io/packages/ru
   > You can use `bundler`, `node16`, or `nodenext` for `moduleResolution`.
 - Use `eslint` with `v8`, [`typescript-eslint` does not support `v9` yet](https://github.com/typescript-eslint/typescript-eslint/issues/8211)
 
+#### Using `vitest`
+
+`pnpm test`
+
+#### Using `jest`
+
+`pnpm test:jest`
+
+
 ### Docs
 
-`npx eslint-doc-generator --init-rule-docs`
+`npx eslint-doc-generator --init-rule-docs` will create new files for each rule if necessary.
 
-`npx eslint-doc-generator`
+`npx eslint-doc-generator` will update existing files and the rules list.
+
+You can see an example of generated documentation in the nex section.
 
 ### Rules
 
