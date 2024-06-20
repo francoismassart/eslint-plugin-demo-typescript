@@ -32,7 +32,7 @@
     "docs:init": "eslint-doc-generator --init-rule-docs",
     "docs:update": "eslint-doc-generator",
     "test:jest": "jest",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "license": "ISC",
   "dependencies": {
@@ -49,6 +49,7 @@
     "jest": "^29.7.0",
     "ts-jest": "^29.1.4",
     "tsup": "^8.1.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   }
 }
