@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-demo-typescript",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1",
   "description": "Demonstrating an eslint plugin written in TypeScript",
   "main": "lib/index.js",
   "files": [
