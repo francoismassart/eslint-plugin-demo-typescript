@@ -39,8 +39,20 @@ NB: In order to use, the [`RuleTester`](https://typescript-eslint.io/packages/ru
   > You can use `bundler`, `node16`, or `nodenext` for `moduleResolution`.
 - Use `eslint` with `v8`, [`typescript-eslint` does not support `v9` yet](https://github.com/typescript-eslint/typescript-eslint/issues/8211)
 
-### Docs (Not working yet)
+### Docs
 
 `npx eslint-doc-generator --init-rule-docs`
 
 `npx eslint-doc-generator`
+
+### Rules
+
+<!-- begin auto-generated rules list -->
+
+💡 Manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
+
+| Name                             | Description            | 💡 |
+| :------------------------------- | :--------------------- | :- |
+| [my-rule](docs/rules/my-rule.md) | An example ESLint rule | 💡 |
+
+<!-- end auto-generated rules list -->
