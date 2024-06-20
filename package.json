@@ -27,8 +27,9 @@
   },
   "bugs": "https://github.com/francoismassart/eslint-plugin-demo-typescript/issues",
   "scripts": {
-    "build": "tsc -b tsconfig.json",
-    "tsup": "tsup ./lib/index.ts",
+    "build": "tsc --build",
+    "build:time": "tsc --build --diagnostics",
+    "tsup": "tsup ./src/index.ts",
     "docs:init": "eslint-doc-generator --init-rule-docs",
     "docs:update": "eslint-doc-generator",
     "test:jest": "jest",
