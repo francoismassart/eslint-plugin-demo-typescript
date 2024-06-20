@@ -11,7 +11,7 @@ It will be a quick way to browse the full code on its own and possibly to enhanc
 
 ## Getting started
 
-I worked on this repo using `pnpm` but I should work with other package manager.
+I worked on this repo using `pnpm` but it should work with other package manager.
 
 ### Install
 
@@ -64,9 +64,9 @@ NB: In order to use, the [`RuleTester`](https://typescript-eslint.io/packages/ru
 
 ### Docs
 
-`npx eslint-doc-generator --init-rule-docs` will create new files for each rule if necessary.
+`pnpm docs:init` will create new files for each rule if necessary.
 
-`npx eslint-doc-generator` will update existing files and the rules list.
+`pnpm docs:update` will update existing files and the rules list.
 
 You can see an example of generated documentation in the nex section.
 
