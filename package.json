@@ -31,7 +31,7 @@
     "tsup": "tsup ./lib/index.ts",
     "docs:init": "eslint-doc-generator --init-rule-docs",
     "docs:update": "eslint-doc-generator",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "license": "ISC",
   "dependencies": {
@@ -45,6 +45,7 @@
     "@typescript-eslint/rule-tester": "^7.13.0",
     "eslint-doc-generator": "^1.7.1",
     "tsup": "^8.1.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   }
 }
