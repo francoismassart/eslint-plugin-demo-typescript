@@ -2,15 +2,15 @@
   "name": "eslint-plugin-demo-typescript",
   "version": "0.0.2-beta.1",
   "description": "Demonstrating an eslint plugin written in TypeScript",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "files": [
     "docs/",
-    "dist/"
+    "lib/"
   ],
   "type": "commonjs",
   "exports": {
     ".": {
-      "default": "./dist/index.js"
+      "default": "./lib/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -29,7 +29,7 @@
   "scripts": {
     "build": "tsc --build",
     "build:time": "tsc --build --diagnostics",
-    "tsup": "tsup ./src/index.ts",
+    "tsup": "tsup ./src/index.ts --outDir lib/",
     "docs:init": "eslint-doc-generator --init-rule-docs",
     "docs:update": "eslint-doc-generator",
     "test:jest": "jest",
