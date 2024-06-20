@@ -2,15 +2,15 @@
   "name": "eslint-plugin-demo-typescript",
   "version": "0.0.2-beta.0",
   "description": "Demonstrating an eslint plugin written in TypeScript",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "files": [
     "docs/",
-    "lib/"
+    "dist/"
   ],
   "type": "commonjs",
   "exports": {
     ".": {
-      "default": "./lib/index.js"
+      "default": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },
