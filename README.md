@@ -68,7 +68,7 @@ NB: In order to use, the [`RuleTester`](https://typescript-eslint.io/packages/ru
 
 `pnpm docs:update` will update existing files and the rules list.
 
-You can see an example of generated documentation in the nex section.
+You can see an example of generated documentation in the next section.
 
 ### Rules
 
