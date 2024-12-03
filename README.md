@@ -74,8 +74,16 @@ You can see an example of generated documentation in the next section.
 
 💡 Manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
 
-| Name                             | Description            | 💡  |
-| :------------------------------- | :--------------------- | :-- |
-| [my-rule](docs/rules/my-rule.md) | An example ESLint rule | 💡  |
+| Name                             | Description            | 💡 |
+| :------------------------------- | :--------------------- | :- |
+| [my-rule](docs/rules/my-rule.md) | An example ESLint rule | 💡 |
 
 <!-- end auto-generated rules list -->
+
+## Additional resources
+
+See [`eslint-plugin-example-typed-linting`](https://github.com/typescript-eslint/examples/tree/main/packages/eslint-plugin-example-typed-linting) for an example plugin that supports typed linting.
+
+## TODO
+
+- fix: `docs:update`

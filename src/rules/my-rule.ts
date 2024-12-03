@@ -8,6 +8,7 @@ type MessageIds = "issue:var" | "fix:let" | "fix:const";
 type Options = [
   {
     someBool: boolean;
+    someEnum: string;
   }
 ];
 
@@ -40,7 +41,15 @@ export const myRule = createRule<Options, MessageIds>({
         type: "object",
         properties: {
           someBool: {
+            description: "someBool description.",
             type: "boolean",
+            default: true,
+          },
+          someEnum: {
+            description: "someEnum description.",
+            type: "string",
+            enum: ["always", "never"],
+            default: "always",
           },
         },
         additionalProperties: false,
@@ -48,7 +57,7 @@ export const myRule = createRule<Options, MessageIds>({
     ],
     type: "suggestion",
   },
-  defaultOptions: [{ someBool: false }],
+  defaultOptions: [{ someBool: false, someEnum: "always" }],
   create: (context, options) => {
     return {
       VariableDeclaration: (node) => {
