@@ -1,11 +1,21 @@
 import { RuleCreator } from '@typescript-eslint/utils/eslint-utils';
 export { ESLintUtils } from '@typescript-eslint/utils';
 
+// Message IDs don't need to be prefixed, I just find it easier to keep track of them this way
+type MessageIds = 'issue:var' | 'fix:let' | 'fix:const';
+
+// The options that the rule can take
+type Options = [
+  {
+    someBool: boolean;
+  },
+];
+
 // The Rule creator returns a function that is used to create a well-typed ESLint rule
 // The parameter passed into RuleCreator is a URL generator function.
 export const createRule = RuleCreator(name => `https://my-website.io/eslint/${name}`);
 
-export const myRule= createRule({
+export const myRule= createRule<Options, MessageIds>({
   name: 'my-rule',
   meta: {
     docs: {
@@ -13,19 +23,34 @@ export const myRule= createRule({
     },
     hasSuggestions: true,
     messages: {
-      // Message IDs don't need to be prefixed, I just find it easier to keep track of them this way
       'issue:var': 'Prefer using `let` or `const`',
       'fix:let': 'Replace this `var` declaration with `let`',
       'fix:const': 'Replace this `var` declaration with `const`',
     },
-    schema: [],
+    schema: [{
+      type: 'object',
+      properties: {
+        someBool: {
+          type: 'boolean',
+        },
+      },
+      additionalProperties: false,
+    }],
     type: 'suggestion',
   },
-  defaultOptions: [],
+  defaultOptions: [{ someBool: false }],
   create: context => {
     return {
       VariableDeclaration: node => {
         if (node.kind === 'var') {
+
+          // Reading inline configuration
+          // console.log(context.options[0]);
+
+          // Shared settings
+          // const settings = context.settings || { demoTypescript: { sharedSetting: 'yolo' } };
+          // const demoTypeScriptSettings = settings.demoTypescript;
+          // console.log(demoTypeScriptSettings);
 
           const range: readonly [number, number] = [node.range[0], node.range[0] + 3 /* 'var'.length */]
           context.report({
