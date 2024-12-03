@@ -37,7 +37,6 @@ I would recommend Vitest but I also added Jest in case you want it.
 | -                        | ✅ Support benches                             |
 | ❌ Require `ts-jest` lib | ❌ Requires `setupFile` and `vitest.config.ts` |
 
-
 NB: In order to use, the [`RuleTester`](https://typescript-eslint.io/packages/rule-tester) from `@typescript-eslint/rule-tester`, we must:
 
 - Have a `tsconfig.json` with:
@@ -61,7 +60,6 @@ NB: In order to use, the [`RuleTester`](https://typescript-eslint.io/packages/ru
 
 `pnpm test:jest`
 
-
 ### Docs
 
 `pnpm docs:init` will create new files for each rule if necessary.
@@ -76,8 +74,8 @@ You can see an example of generated documentation in the next section.
 
 💡 Manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
 
-| Name                             | Description            | 💡 |
-| :------------------------------- | :--------------------- | :- |
-| [my-rule](docs/rules/my-rule.md) | An example ESLint rule | 💡 |
+| Name                             | Description            | 💡  |
+| :------------------------------- | :--------------------- | :-- |
+| [my-rule](docs/rules/my-rule.md) | An example ESLint rule | 💡  |
 
 <!-- end auto-generated rules list -->
