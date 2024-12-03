@@ -1,9 +1,9 @@
-import { RuleTester } from '@typescript-eslint/rule-tester';
+import { RuleTester } from "@typescript-eslint/rule-tester";
 
-import { myRule } from './my-rule';
+import { myRule } from "./my-rule";
 
 const ruleTester = new RuleTester({
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -11,7 +11,7 @@ const ruleTester = new RuleTester({
   },
 });
 
-ruleTester.run('eslint-plugin/my-rule', myRule, {
+ruleTester.run("eslint-plugin/my-rule", myRule, {
   valid: [
     {
       // a code snippet that should pass the linter
@@ -26,17 +26,17 @@ ruleTester.run('eslint-plugin/my-rule', myRule, {
       code: `var z = 'foo'`,
       errors: [
         {
-          messageId: 'issue:var',
+          messageId: "issue:var",
           suggestions: [
             {
-              messageId: 'fix:let',
+              messageId: "fix:let",
               output: `let z = 'foo'`,
             },
             {
-              messageId: 'fix:const',
+              messageId: "fix:const",
               output: `const z = 'foo'`,
-            }
-          ]
+            },
+          ],
         },
       ],
     },
