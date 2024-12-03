@@ -11,6 +11,12 @@ type Options = [
   }
 ];
 
+interface SharedConfigurationSettings {
+  demoTypescript?: {
+    sharedSetting: string;
+  };
+}
+
 // The Rule creator returns a function that is used to create a well-typed ESLint rule
 // The parameter passed into RuleCreator is a URL generator function.
 export const createRule = RuleCreator(
@@ -43,21 +49,24 @@ export const myRule = createRule<Options, MessageIds>({
     type: "suggestion",
   },
   defaultOptions: [{ someBool: false }],
-  create: (context) => {
+  create: (context, options) => {
     return {
       VariableDeclaration: (node) => {
         if (node.kind === "var") {
           // Reading inline configuration
-          // console.log(context.options[0]);
+          console.log(options[0]);
 
           // Shared settings
-          // const settings = context.settings || { demoTypescript: { sharedSetting: 'yolo' } };
-          // const demoTypeScriptSettings = settings.demoTypescript;
-          // console.log(demoTypeScriptSettings);
+          const demoTypeScriptSharedSettings = (context.settings
+            ?.demoTypeScriptSettings || {
+            sharedSetting: "default",
+          }) as SharedConfigurationSettings;
+          console.log(demoTypeScriptSharedSettings);
 
+          const rangeStart = node.range[0];
           const range: readonly [number, number] = [
-            node.range[0],
-            node.range[0] + 3 /* 'var'.length */,
+            rangeStart,
+            rangeStart + 3 /* 'var'.length */,
           ];
           context.report({
             node,
